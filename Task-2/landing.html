@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root { --primary: #3498db; --dark: #2c3e50; --light: #f4f4f4; }
+        body { font-family: 'Poppins', sans-serif; margin: 0; line-height: 1.6; color: #333; background: var(--light); }
+        .container { max-width: 1100px; margin: auto; padding: 0 20px; }
+        header { background: var(--dark); color: #fff; padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        nav .logo { font-size: 1.5rem; font-weight: 600; }
+        nav ul { display: flex; list-style: none; gap: 20px; padding: 0; margin: 0; }
+        nav a { color: #fff; text-decoration: none; transition: color 0.3s; }
+        nav a:hover { color: var(--primary); }
+        .hero { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); text-align: center; padding: 6rem 1rem; margin-bottom: 2rem; }
+        .hero h1 { font-size: 3rem; margin: 0 0 10px; color: var(--dark); }
+        .hero p { font-size: 1.5rem; color: #555; margin-bottom: 30px; }
+        section { padding: 3rem 0; }
+        h2 { text-align: center; margin-bottom: 2rem; color: var(--dark); position: relative; }
+        h2::after { content: ''; display: block; width: 50px; height: 3px; background: var(--primary); margin: 10px auto 0; }
+        .about-content { display: flex; align-items: center; gap: 2rem; background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .about-img { border-radius: 50%; object-fit: cover; border: 5px solid var(--light); width: 200px; height: 200px; flex-shrink: 0; }
+        .skills-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; list-style: none; padding: 0; }
+        .skills-list li { background: #fff; padding: 0.5rem 1.5rem; border-radius: 50px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); font-weight: 500; color: var(--dark); }
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .project-card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: transform 0.3s; border-top: 4px solid var(--primary); }
+        .project-card:hover { transform: translateY(-5px); }
+        .project-info { padding: 1.5rem; }
+        .btn { display: inline-block; background: var(--primary); color: #fff; padding: 0.8rem 1.5rem; text-decoration: none; border-radius: 5px; transition: background 0.3s; }
+        .btn:hover { background: #2980b9; }
+        footer { background: var(--dark); color: #fff; text-align: center; padding: 2rem 0; margin-top: 3rem; }
+        @media(max-width: 768px) { 
+            .about-content { flex-direction: column; text-align: center; } 
+            nav { flex-direction: column; gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">ABDUL AFNAN SHARIFF portfolio</div>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>ABDUL AFNAN SHARIFF</h1>
+            <p>Web Developer | Designer</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src="C:\Users\havoc\Downloads\WhatsApp Image 2026-01-23 at 2.57.57 AM (1).jpeg" alt="Your Photo" width="200" height="200" class="about-img">
+            <div>
+                <p>I am a motivated student with a strong interest in computer applications and technology. I enjoy learning new programming skills, working on practical projects, and exploring how technology can solve real-world problems. I am continuously improving my technical knowledge and aiming to build a successful career in the IT field.</p>
+                <br>
+                <a href="C:\Users\havoc\Downloads\Afnan Shariff – Resume (1).pdf" class="btn" download>Download Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="container">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>React</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="container">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Project 1</h3>
+                    <p>The Quiz Application is a user-friendly software designed to test users’ knowledge through multiple-choice questions. It allows users to attempt quizzes, receive instant feedback, and view their scores. The system helps improve learning, logical thinking, and self-assessment in an interactive way.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Project 2</h3>
+                    <p>The Mental Health Surveillance System is designed to monitor and assess users’ mental well-being through questionnaires and behavioral inputs. It helps in early identification of stress, anxiety, or depression and provides insights or recommendations for improving mental health while maintaining user privacy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Contact</h2>
+        <div style="text-align: center;">
+            <p>Email: afnanshariff00@gmail.com</p>
+            <p>Phone:+916363904167</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 AFNAN SHARIFF. All rights reserved.</p>
+    </footer>
+</body>
+</html>
